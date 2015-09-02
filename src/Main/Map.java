@@ -37,6 +37,7 @@ public class Map implements TileBasedMap{
         map = new Block[width][height];
         for(int i = 0; i < image.getWidth();i++){
             for(int j = 0; j < image.getHeight();j++){
+                //getRGB(i+1, j+1)?
                 c = new Color(image.getRGB(i,j));
                 if(c.getBlue() == 255)
                     b = Block.BlockType.WALL;
