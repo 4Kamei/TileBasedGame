@@ -301,17 +301,18 @@ public class Main extends BasicGame{
 	@Override
 	public void update(GameContainer gc, int i) throws SlickException {
         fpscounter++;
+        float cons = 1f * 1/gc.getFPS() * 100;
         if(goingUp){
-            cameraY -= 1f * 1/gc.getFPS() * 100;
+            cameraY -= cons;
         }
         if(goingDown){
-            cameraY += 1f * 1/gc.getFPS() * 100;
+            cameraY += cons;
         }
         if(goingLeft){
-            cameraX -= 1f * 1/gc.getFPS() * 100;
+            cameraX -= cons;
         }
         if(goingRight){
-            cameraX += 1f * 1/gc.getFPS() * 100;
+            cameraX += cons;
         }
         if(cameraX > 2000){
             cameraX = 2000;
